@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    overflow-x: hidden;
+}
+.container{
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.container .home-wrapper{
+    height:100vh;
+    background-image: url("../Image/web-developer-background.jpg");
+    background-position: center;
+    background-size: 100vw 100vh;
+    display:flex;
+    align-items : center;
+    justify-content:center;
+    position: relative;
+}
+.home-wrapper .blur-background{
+    width: 80%;
+    height:70%;
+    background-color: rgba(0, 0, 0, 0.541);
+    backdrop-filter: blur(20px);
+    position: static;
+    display: flex;
+    justify-content: center;
+}
+.home-wrapper .left-part{
+    z-index: 1;
+    position: absolute;
+    height:60px;
+    width:0;
+    left: 0;
+    top:22%;
+    background:#5F98FB;
+    color:white;
+    direction: rtl;
+    font-size: 2.1rem;
+    display: flex;
+    align-items: center;
+    font-family: Dosis;
+    padding-right: 10px;
+    transition: width 0.7s ease-in;
+}
+.home-wrapper .blur-background h2{
+    width: 100%;
+   position: absolute;
+   left: 30%;
+   top:22%; 
+   font-family: "Great vibes";
+   font-size: 5rem;
+   color: #070707;
+   z-index: 1000;
+   opacity: 0;
+   transition: opacity 0.7s linear;
+}
+.home-wrapper .blur-background p{
+    position: absolute;
+    top:45%;
+    left: 35%;
+    color: whitesmoke;
+    font-size: 1.8rem;
+    font-family: Dosis;
+    width: 100vw;
+}
+.home-wrapper .blur-background button{
+    height: 50px ;
+    width: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:1.6rem;
+    color:#5F98FB;
+    background-color: #5f98fb23;
+    border:2px solid #5F98FB;
+    border-radius:20px;
+    position: relative;
+    top: 70%;
+    right: -90%;
+    transition: right 0.7s linear;
+}
+.home-wrapper .blur-background button:hover{
+    cursor: pointer;
+    background-color:#5F98FB ;
+    color:rgb(252, 252, 252);
+}
+@media only screen and (max-width:900px)
+{
+    .home-wrapper .left-part{
+        font-size: 1.7rem;
+        height:50px
+    }
+    .home-wrapper .blur-background h2{
+        font-size: 4.3rem;
+        left: 22%;
+        top: 25%;
+
+    }
+    .home-wrapper .blur-background p {
+        font-size: 1.4rem;
+    }
+}
+@media only screen and (max-width:700px)
+{
+    .home-wrapper .left-part{
+        font-size: 1.2rem;
+        height:50px
+    }
+    .home-wrapper .blur-background h2{
+        font-size: 3.5rem;
+        left: 22%;
+        top: 25%;
+
+    }
+    .home-wrapper .blur-background p {
+        font-size: 1.4rem;
+        left: 25%;
+
+    }
+    .home-wrapper .blur-background button{
+        /* left: 0%; */
+        font-size: 1.4rem;
+        
+    }
+}
+@media only screen and (max-width:576px)
+{
+    .home-wrapper .left-part{
+        font-size: 1rem;
+        height:40px;
+    }
+    .home-wrapper .blur-background h2{
+        font-size: 2.4rem;
+        left: 22%;
+        top: 25%;
+
+    }
+    .home-wrapper .blur-background p {
+        font-size: 0.8rem;
+        left: 25%;
+        display: block;
+
+    }
+    .home-wrapper .blur-background button{
+        /* left: 0%; */
+        font-size: 1.1rem;
+        height: 40px;
+        width: 150px;
+        
+    }
+}
+@media only screen and (max-width:384px)
+{
+    .home-wrapper .left-part{
+        font-size: 1rem;
+        height:40px;
+    }
+    .home-wrapper .blur-background h2{
+        font-size: 2rem;
+        left: 10%;
+        top: 25%;
+
+    }
+    .home-wrapper .blur-background p {
+        font-size: 0.8rem;
+        left: 25%;
+        display: block;
+
+    }
+    .home-wrapper .blur-background button{
+        /* left: 0%; */
+        font-size: 1.1rem;
+        height: 40px;
+        width: 150px;
+        
+    }
+}
