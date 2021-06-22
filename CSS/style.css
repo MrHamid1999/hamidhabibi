@@ -183,3 +183,24 @@ body{
         
     }
 }
+/* .top-menu-wrapper{
+    height: 150px;
+    width: 100%;
+    background-color: black;
+    border-bottom: 3px solid #5F98FB;
+} */
+.about-wrapper{
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.about-wrapper .img-wrapper{
+    width: 30%;
+    height: 30%;
+    overflow: hidden;
+}
+.about-wrapper .img-wrapper img{
+    height: 300px;
+    width: auto;
+}
