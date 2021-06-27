@@ -51,7 +51,6 @@ body{
     transition: width 0.7s ease-in;
 }
 .home-wrapper .blur-background h2{
-    width: 100%;
    position: absolute;
    left: 30%;
    top:22%;
@@ -69,7 +68,7 @@ body{
     color: whitesmoke;
     font-size: 1.8rem;
     font-family: Dosis;
-    width: 100vw;
+    display: inline-block;
 }
 .home-wrapper .blur-background button{
     height: 50px ;
@@ -146,7 +145,7 @@ body{
     .home-wrapper .blur-background p {
         font-size: 0.8rem;
         left: 25%;
-        display: block;
+        display: inline-block;
 
     }
     .home-wrapper .blur-background button{
@@ -172,7 +171,7 @@ body{
     .home-wrapper .blur-background p {
         font-size: 0.8rem;
         left: 25%;
-        display: block;
+        display: inline-block;
 
     }
     .home-wrapper .blur-background button{
@@ -184,16 +183,48 @@ body{
     }
 }
 .top-menu-wrapper{
-  height: 100px;
+  height: 60px;
   width: 100%;
-  background-color: #ccc;
-  border-bottom: 3px solid red;
+  background-color: #212020;
+  border-bottom: 4px solid #5F98FB;
+}
+.top-menu-wrapper nav {
+    width: 70%;
+    margin: auto;
+
+}
+.top-menu-wrapper nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1%;
+}
+.top-menu-wrapper nav ul li {
+    list-style: none;
+    color: blanchedalmond;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.top-menu-wrapper nav ul li:hover {
+    color: #5F98FB;
+    /* border: 2px solid #5F98FB; */
+    border-radius: 10px;
+   
 }
 .about-wrapper{
     display:flex;
-    width:100%;
+    width:80%;
     flex-direction: row;
     justify-content: space-around;
+    margin: auto;
+    margin-top: 10%;
+    min-height: 80vh;
+    gap: 50px;
+    
 }
 .about-wrapper .img-wrapper{
     width: 30%;
