@@ -6,3 +6,7 @@ window.addEventListener("load" , () => {
     name.style.opacity = "1"
     button.style.right = "0"
 })
+let scroller = document.querySelector('.blur-background button');
+scroller.addEventListener("click" , () => {
+  
+})
