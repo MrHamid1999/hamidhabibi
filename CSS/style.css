@@ -223,6 +223,13 @@ body{
     border-radius: 10px;
    
 }
+.top-menu-wrapper>li{
+    color: blanchedalmond;
+    font-size: 1.5rem;
+    padding: 5px 0 0 15px;
+    display: none;
+
+}
 .about-wrapper{
     display:flex;
     width:80%;
@@ -314,11 +321,25 @@ body{
     .top-menu-wrapper nav{
         display: none;
     }
+    .top-menu-wrapper>li{
+        display:inline-block;
+    }
     .about-wrapper{
         flex-direction: column;
+        margin-top: 50px;
+        
+    }
+    .about-wrapper .img-wrapper{
+        width: 100%;
+        left : 12%
     }
     .about-wrapper .mobile-header{
         display: block;
+        margin: auto;
+        margin-bottom: 15%;
+    }
+    .info-wrapper{
+        width: 100%;
     }
     .info-wrapper h1{
         display: none;
