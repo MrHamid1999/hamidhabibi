@@ -127,6 +127,8 @@ body{
     .home-wrapper .blur-background button{
         /* left: 0%; */
         font-size: 1.4rem;
+        height:40px;
+        width:160px
 
     }
 }
@@ -233,6 +235,11 @@ body{
     
     
 }
+.about-wrapper .mobile-header{
+    display:none;
+    color:#5F98FB;
+    font-family: century;
+}
 .about-wrapper .img-wrapper{
     width: 30%;
     height: 30%;
@@ -295,7 +302,25 @@ body{
     .info-wrapper p{
         font-size:0.8rem
     }
+    .container .top-menu-wrapper{
+        height:40px
+    }
     .top-menu-wrapper nav ul li{
         font-size:0.9rem
     }
-}  
+} 
+@media only screen and (max-width: 610px)
+{
+    .top-menu-wrapper nav{
+        display: none;
+    }
+    .about-wrapper{
+        flex-direction: column;
+    }
+    .about-wrapper .mobile-header{
+        display: block;
+    }
+    .info-wrapper h1{
+        display: none;
+    }
+}
