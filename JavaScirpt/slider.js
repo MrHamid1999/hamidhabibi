@@ -27,16 +27,34 @@ scroller.addEventListener("click" , () => {
 let viewPageBtn = document.querySelector(".blur-background button");
 viewPageBtn.addEventListener("click" , () => {
    topMenu.scrollIntoView({top:0 , behavior:"smooth"})
-    
+   
 })
 // these codes are controling hidden side menu that will appeare after clicking on menu icon 
 let menuIcon = document.querySelector(".top-menu-wrapper>li")
 let hiddenMenu = document.querySelector(".sidebar-wrapper")
 menuIcon.addEventListener("click" , () => {
-    console.log("fuck u bitch");
-    hiddenMenu.style.display = "flex"
+    hiddenMenu.style.display = "flex";
 })
 let colsingIcon = document.querySelector(".sidebar-wrapper > li")
 colsingIcon.addEventListener("click" , () => {
     hiddenMenu.style.display = "none";
+})
+// these are the codes that control hidden slider buttons 
+let hiddenBtns = document.querySelectorAll(".h-item")
+hiddenBtns.forEach(btn => {
+    btn.addEventListener("click" , e => {
+        hiddenMenu.style.display = "none";
+        const item = e.target
+        // console.log(item);
+        switch (item.classList[1]) {
+            case "h-home":
+                window.scrollTo({top:0 , behavior:"smooth"})
+                break;
+        
+            default:
+                break;
+        }
+        
+        
+    })
 })

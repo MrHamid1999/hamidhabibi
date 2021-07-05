@@ -276,9 +276,11 @@ body{
     cursor: pointer;
     padding: 5px;
     box-sizing: border-box;
+    /* padding: 20px; */
+   
 }
 .top-menu-wrapper nav ul li:hover {
-    color: #5F98FB;
+   color: #5F98FB;
     /* border: 2px solid #5F98FB; */
     border-radius: 10px;
    
@@ -289,6 +291,10 @@ body{
     padding: 5px 0 0 15px;
     display: none;
 
+}
+.top-menu-wrapper>li:hover{
+    color: #5F98FB ;
+    cursor: pointer;
 }
 .about-wrapper{
     display:flex;
