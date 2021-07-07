@@ -17,6 +17,10 @@ window.addEventListener("load" , () => {
             topMenu.classList.remove("position")
         }
     })
+    const aboutPage = document.querySelector(" .about-wrapper")
+    if (window.innerHeight > window.innerWidth) {
+        aboutPage.style.height = "auto"
+    }
 })
 // this code controls the button in first page 
 // by clicking on this button window will scroll to about partition
@@ -29,6 +33,8 @@ viewPageBtn.addEventListener("click" , () => {
    topMenu.scrollIntoView({top:0 , behavior:"smooth"})
    
 })
+
+
 // these codes are controling hidden side menu that will appeare after clicking on menu icon 
 let menuIcon = document.querySelector(".top-menu-wrapper>li")
 let hiddenMenu = document.querySelector(".sidebar-wrapper")
@@ -39,6 +45,8 @@ let colsingIcon = document.querySelector(".sidebar-wrapper > li")
 colsingIcon.addEventListener("click" , () => {
     hiddenMenu.style.display = "none";
 })
+
+
 // these are the codes that control hidden slider buttons 
 let hiddenBtns = document.querySelectorAll(".h-item")
 hiddenBtns.forEach(btn => {
@@ -58,3 +66,7 @@ hiddenBtns.forEach(btn => {
         
     })
 })
+
+// making about part responsive
+// there are some porblems with devices that length > width
+
