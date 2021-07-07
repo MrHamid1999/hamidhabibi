@@ -310,6 +310,9 @@ body{
     
     
 }
+.about-wrapper.minHeight{
+    min-height: "none" !important;
+}
 .about-wrapper .mobile-header{
     display:none;
     color:#5F98FB;
@@ -528,7 +531,10 @@ body{
     .tech-info-wrapper {
         font-size:0.7rem
     }
-    .tools-p2{
+    .statistic-item .percent-container{
+        height: 20px;
+    }
+    .tools-wrapper .tools-p2{
         border-width: 4px;
     }
     .tools-p2 div h2 {

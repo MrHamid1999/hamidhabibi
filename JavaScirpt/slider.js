@@ -17,10 +17,13 @@ window.addEventListener("load" , () => {
             topMenu.classList.remove("position")
         }
     })
-    const aboutPage = document.querySelector(" .about-wrapper")
-    if (window.innerHeight > window.innerWidth) {
-        aboutPage.style.height = "auto"
+    const aboutPage = document.querySelector(".about-wrapper")
+    if (screen.height > screen.width) {
+        aboutPage.classList.add("minHeight")
+    }else{
+        aboutPage.classList.remove("minHeight")
     }
+
 })
 // this code controls the button in first page 
 // by clicking on this button window will scroll to about partition
@@ -67,6 +70,4 @@ hiddenBtns.forEach(btn => {
     })
 })
 
-// making about part responsive
-// there are some porblems with devices that length > width
 
