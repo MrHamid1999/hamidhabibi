@@ -299,6 +299,7 @@ body{
 .about-wrapper{
     display:flex;
     width:80%;
+    max-height: 88vh;
     flex-direction: row;
     justify-content: space-between;
     margin: auto;
@@ -393,6 +394,7 @@ body{
     .about-wrapper{
         flex-direction: column;
         margin-top: 50px;
+        max-height:none;
         
     }
     .about-wrapper .img-wrapper{
@@ -411,3 +413,121 @@ body{
         display: none;
     }
 }
+.tech-info-wrapper{
+    width: 100%;
+    background: linear-gradient( 180deg , #03034B ,#4C07FC  , #5C03F8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #E2E2E2;
+}
+.tech-info-wrapper .statistics-p1-wrapper{
+    width:100%;
+    display: flex;
+    padding: 5% 0;
+    flex-direction: column;
+    align-items: center;
+
+} 
+.statistics-p1-wrapper .statistics{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}.statistics .statistic-item{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 13% auto;
+    align-items: center;
+    /* justify-content: flex-start; */
+    padding: 2% 0 ;
+}
+.statistic-item p {
+    justify-self: start;
+    font-weight: 600;
+}
+.statistic-item .percent-container {
+    height: 30px;
+    width: 80%;
+    background-color: #E2E2E2;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: auto 12%;
+    align-items: center;
+    color: #4a4a4a;
+}
+.percent-container p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.percent-container .percentage{
+    height: 100%;
+    background-color: #5F98FB;
+    
+    
+}
+.html-wrapper .percent-container .percentage ,
+.css-wrapper .percent-container .percentage{
+    width: 85%;
+}
+.js-wrapper .percent-container .percentage{
+    width: 80%;
+}
+.adobe-xd-wrapper .percent-container .percentage{
+    width: 60%;
+}
+.photoshop-wrapper .percent-container .percentage{
+    width: 30%;
+}
+.tools-wrapper{
+    width: 100%;
+    padding: 1%;
+
+}
+.tools-wrapper .tools-p2{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: #1e1e1e;
+    border: 7px solid #ffffff;
+    border-radius: 12px;
+    padding: 3% 0;
+}
+.tools-p2 div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.tools-p2 div h2{
+    margin-bottom: 50px;
+}
+.tools-p2 div ul li {
+    list-style: none;
+    padding: 10px;
+    color: #b9b8b8;
+}
+@media only screen and (max-width:760px)
+{
+    .statistics-p1-wrapper .statistics{
+        width: 100%;
+    }
+    .statistics .statistic-item{
+        width:80%;
+    }
+    .tools-p2 div ul li {
+        padding: 5px;
+    }
+}
+@media only screen and (max-width:500px)
+{
+    .tech-info-wrapper {
+        font-size:0.7rem
+    }
+    .tools-p2 div h2 {
+        margin-bottom: 20px;
+    }
+} 
