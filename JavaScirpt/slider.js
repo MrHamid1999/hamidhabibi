@@ -1,14 +1,14 @@
 // topMenu is the top menu in page witch is fixed 
-let topMenu =  document.querySelector(".top-menu-wrapper")
+let topMenu =  document.querySelector(".top-menu-wrapper");
 // animating first page while document is loading 
 // I'll change some properties of elements to move them after window has been loaded
 window.addEventListener("load" , () => {
-    const left = document.querySelector(".left-part")
-    const name = document.querySelector(".blur-background h2")
-    const button = document.querySelector(".blur-background button")
+    const left = document.querySelector(".left-part");
+    const name = document.querySelector(".blur-background h2");
+    const button = document.querySelector(".blur-background button");
     left.style.width= "45%";
-    name.style.opacity = "1"
-    button.style.right = "0"
+    name.style.opacity = "1";
+    button.style.right = "0";
     window.addEventListener("scroll" , () => {
         const firstPage = document.querySelector(".home-wrapper");
         if (window.scrollY > firstPage.scrollHeight ) {
@@ -17,11 +17,11 @@ window.addEventListener("load" , () => {
             topMenu.classList.remove("position")
         }
     })
-    const aboutPage = document.querySelector(".about-wrapper")
+    const aboutPage = document.querySelector(".about-wrapper");
     if (screen.height > screen.width) {
-        aboutPage.classList.add("minHeight")
+        aboutPage.classList.add("minHeight");
     }else{
-        aboutPage.classList.remove("minHeight")
+        aboutPage.classList.remove("minHeight");
     }
 
 })

@@ -458,7 +458,7 @@ body{
     background-color: #E2E2E2;
     justify-self: end;
     display: grid;
-    grid-template-columns: auto 12%;
+    grid-template-columns: auto 15%;
     align-items: center;
     color: #4a4a4a;
 }
@@ -531,6 +531,10 @@ body{
     .tech-info-wrapper {
         font-size:0.7rem
     }
+    .statistics .statistic-item{
+        grid-template-columns: 20% auto;
+        
+    }
     .statistic-item .percent-container{
         height: 20px;
     }
@@ -541,3 +545,194 @@ body{
         margin-bottom: 20px;
     }
 } 
+.projects-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projects-wrapper .project-tittle-wrapper{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.project-tittle-wrapper .project-tittle-combination{
+
+      font-size: 1.6rem; 
+}
+.project-tittle-combination h1 {
+    padding: 20px;
+    font-family: MingLiU_HKSCS-ExtB;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+.project-tittle-combination hr {
+    transform: rotate(-7deg);
+}
+.projects-container{
+    width: 100%;
+    height: 500px;
+    padding: 50px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.projects-container .projects{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.projects .project{
+    display: none;
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    background-color: #dadada56;
+    backdrop-filter: blur(50px);
+    border: 1px solid #5f98fb18;
+    padding: 50px;
+
+}
+.projects .project-1{
+    left: 10%;
+    /* top: 12%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.projects .project-2{
+    left: 17.5%;
+    /* top: 15%; */
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+
+
+    display: flex;
+}
+.projects .project-3{
+    display: flex;
+    flex-direction: column;
+    /* top: 20%; */
+    left: 25%;
+    align-items: center;
+    z-index: 5;
+}
+.projects .project-4{
+    display: flex;
+    flex-direction: column;
+    /* top: 15%; */
+    right: 17.5%;
+    align-items: center;
+    z-index: 2;
+}
+.projects .project-5{
+    display: flex;
+    flex-direction: column;
+    /* top: 12%; */
+    right: 10%;
+    align-items: center;
+}
+
+
+.project .project-img {
+
+    
+    width: 300px;
+    height: 140px;
+    margin-bottom: 20px;
+}
+.project-1 .project-img{
+    background: url(../Image/heads&tails.png) ;
+    background-size: contain;
+    
+}
+.project-2 .project-img{
+    background: url(../Image/coming-soon.png) ;
+    background-size: contain;
+   
+    
+}
+.project-3 .project-img{
+    background: url(../Image/starbucks.png) ;
+    background-size: contain;
+
+}
+.project-4 .project-img{
+    background: url(../Image/login-form.png) ;
+    background-size: contain;
+
+}
+.project-5 .project-img{
+    background: url(../Image/ehsan-gallery.png) ;
+    background-size: contain;
+
+}
+
+.project .project-info{
+    display: block;
+    text-align: justify;
+    width: 60%;
+    position: relative;
+    top: 10%;
+}
+.small-slider-wrapper{
+    grid-area: slider;
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+}
+.small-slider-wrapper .slider{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #5f98fb71;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.right-slider{
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #686868;
+}
+.left-slider{
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #686868;
+}
+.right-slider:hover ,
+.left-slider:hover {
+    color: white;
+    cursor: pointer;
+}
+.right-slider:hover{
+    background: linear-gradient(to left , rgba(0, 0, 0, 0.541) , rgba(247, 247, 247, 0.041));
+
+}
+.left-slider:hover{
+    background: linear-gradient(to right , rgba(0, 0, 0, 0.541) , rgba(247, 247, 247, 0.041));
+
+}
+.small-slider-wrapper .slider:hover{
+    background: #5F98FB;
+}
