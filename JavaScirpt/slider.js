@@ -50,7 +50,7 @@ colsingIcon.addEventListener("click" , () => {
 })
 
 
-// these are the codes that control hidden slider buttons 
+// these are the codes that control hidden top menu buttons
 let hiddenBtns = document.querySelectorAll(".h-item")
 hiddenBtns.forEach(btn => {
     btn.addEventListener("click" , e => {
