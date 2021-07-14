@@ -592,24 +592,25 @@ body{
     display: none;
     position: absolute;
     width: 50%;
-    height: 70%;
-    background-color: #dadada56;
+    height: 80%;
+    background-color: #6d97e656;
     backdrop-filter: blur(50px);
-    border: 1px solid #5f98fb18;
-    padding: 50px;
+    border: 1px solid #5f98fb2c;
+    cursor: pointer;
+
 
 }
 .projects .project-1{
+    height: 70%;
     left: 10%;
-    /* top: 12%; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+
 }
 .projects .project-2{
+    height: 75%;
     left: 17.5%;
-    /* top: 15%; */
     flex-direction: column;
     align-items: center;
     z-index: 2;
@@ -620,27 +621,30 @@ body{
 .projects .project-3{
     display: flex;
     flex-direction: column;
-    /* top: 20%; */
     left: 25%;
     align-items: center;
     z-index: 5;
 }
 .projects .project-4{
+    height: 75%;
     display: flex;
     flex-direction: column;
-    /* top: 15%; */
     right: 17.5%;
     align-items: center;
     z-index: 2;
 }
 .projects .project-5{
+    height: 70%;
     display: flex;
     flex-direction: column;
-    /* top: 12%; */
     right: 10%;
     align-items: center;
 }
-
+.project .project-name {
+    padding: 15px 0;
+    font-size: 2rem;
+    font-family: "zen tokyo zoo";
+}
 
 .project .project-img {
 
@@ -682,6 +686,12 @@ body{
     width: 60%;
     position: relative;
     top: 10%;
+    color: #000000bf;
+    font-family: cursive;
+    font-size: 0.9rem;
+}
+.project-1 .project-info{
+    font-size: 0.7rem;
 }
 .small-slider-wrapper{
     grid-area: slider;
@@ -689,6 +699,7 @@ body{
     height: 10px;
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 .small-slider-wrapper .slider{
     width: 15px;
@@ -733,6 +744,83 @@ body{
     background: linear-gradient(to right , rgba(0, 0, 0, 0.541) , rgba(247, 247, 247, 0.041));
 
 }
+.h-right-slider{
+    position: absolute;
+    right: 15%;
+    bottom: -5%;
+    color: #686868;
+    display: none;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 50%;
+
+}
+.h-left-slider{
+    position: absolute;
+    left: 15%;
+    bottom: -5%;
+    color: #686868;
+    display: none;
+    cursor: pointer;
+    padding: 0 10px ;
+    border-radius: 50%;
+}
+.h-right-slider:hover,
+.h-left-slider:hover{
+    background: #4a4a4a2a ;
+    /* color: #E2E2E2; */
+
+}
 .small-slider-wrapper .slider:hover{
     background: #5F98FB;
+}
+@media only screen and (max-width:870px) {
+    .project .project-info{
+        width: 95%;
+        display: none;
+    }
+    .project .project-img{
+        display: none;
+    }
+    .project-3 .project-info{
+        display: block;
+    }
+    .project-3 .project-img{
+        display: block;
+    }
+}
+@media only screen and (max-width:625px){
+    .project .project-img{
+        /* width: 100%; */
+        height: 35%;
+    }
+    .projects .project{
+        width: 70%;
+    }
+    .projects .project-1{left: 5%;}
+    .projects .project-2{left: 10%;}
+    .projects .project-3{left: 15%;}
+    .projects .project-4{right: 10%;}
+    .projects .project-5{right: 5%;}
+    .right-slider, 
+    .left-slider{
+        font-size: 0.5rem;
+    }
+
+}
+@media only screen and (max-width:450px){
+    .h-left-slider , 
+    .h-right-slider{
+        display: inline-block;
+    }
+    .right-slider,
+    .left-slider{
+        display: none;
+    }
+    .project .project-img{
+        width: 100%;
+    }
+    .project .project-info{
+        font-size: 0.7rem;
+    }
 }

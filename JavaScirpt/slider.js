@@ -61,7 +61,9 @@ hiddenBtns.forEach(btn => {
             case "h-home":
                 window.scrollTo({top:0 , behavior:"smooth"})
                 break;
-        
+            case "h-about":
+                
+                break
             default:
                 break;
         }
