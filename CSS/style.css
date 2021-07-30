@@ -290,6 +290,7 @@ body{
     font-size: 1.5rem;
     padding: 5px 0 0 15px;
     display: none;
+    transition: all 0.3s linear;
 
 }
 .top-menu-wrapper>li:hover{
@@ -592,6 +593,18 @@ body{
     justify-content: center;
     
 }
+.projects a {
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
 .projects .project{
     display: none;
     position: absolute;
@@ -601,10 +614,11 @@ body{
     backdrop-filter: blur(50px);
     border: 1px solid #5f98fb2c;
     cursor: pointer;
+    transition:all 0.4s ease-in;
 
 
 }
-.projects .project-1{
+.projects .project-0{
     height: 70%;
     left: 10%;
     display: flex;
@@ -612,7 +626,7 @@ body{
     align-items: center;
 
 }
-.projects .project-2{
+.projects .project-1{
     height: 75%;
     left: 17.5%;
     flex-direction: column;
@@ -622,27 +636,30 @@ body{
 
     display: flex;
 }
-.projects .project-3{
+.projects .project-2{
     display: flex;
     flex-direction: column;
     left: 25%;
     align-items: center;
     z-index: 5;
 }
-.projects .project-4{
+.projects .project-3{
     height: 75%;
     display: flex;
     flex-direction: column;
     right: 17.5%;
     align-items: center;
     z-index: 2;
+    transition: right 0.4s ;
 }
-.projects .project-5{
+.projects .project-4{
     height: 70%;
     display: flex;
     flex-direction: column;
     right: 10%;
     align-items: center;
+    transition: all 0.4s !important;
+
 }
 .project .project-name {
     padding: 15px 0;
@@ -657,29 +674,29 @@ body{
     height: 140px;
     margin-bottom: 20px;
 }
-.project-1 .project-img{
-    background: url(../Image/heads&tails.png) ;
+.project-0 .project-img{
+    /* background: url(../Image/heads&tails.png) ; */
     background-size: contain;
     
 }
-.project-2 .project-img{
-    background: url(../Image/coming-soon.png) ;
+.project-1 .project-img{
+    /* background: url(../Image/coming-soon.png) ; */
     background-size: contain;
    
     
 }
+.project-2 .project-img{
+    /* background: url(../Image/starbucks.png) ; */
+    background-size: contain;
+
+}
 .project-3 .project-img{
-    background: url(../Image/starbucks.png) ;
+    /* background: url(../Image/login-form.png) ; */
     background-size: contain;
 
 }
 .project-4 .project-img{
-    background: url(../Image/login-form.png) ;
-    background-size: contain;
-
-}
-.project-5 .project-img{
-    background: url(../Image/ehsan-gallery.png) ;
+    /* background: url(../Image/ehsan-gallery.png) ; */
     background-size: contain;
 
 }
@@ -694,7 +711,7 @@ body{
     font-family: cursive;
     font-size: 0.9rem;
 }
-.project-1 .project-info{
+.project-0 .project-info{
     font-size: 0.7rem;
 }
 .small-slider-wrapper{
@@ -786,10 +803,10 @@ body{
     .project .project-img{
         display: none;
     }
-    .project-3 .project-info{
+    .project-2 .project-info{
         display: block;
     }
-    .project-3 .project-img{
+    .project-2 .project-img{
         display: block;
     }
 }
@@ -805,11 +822,11 @@ body{
     .projects .project{
         width: 70%;
     }
-    .projects .project-1{left: 5%;}
-    .projects .project-2{left: 10%;}
-    .projects .project-3{left: 15%;}
-    .projects .project-4{right: 10%;}
-    .projects .project-5{right: 5%;}
+    .projects .project-0{left: 5%;}
+    .projects .project-1{left: 10%;}
+    .projects .project-2{left: 15%;}
+    .projects .project-3{right: 10%;}
+    .projects .project-4{right: 5%;}
     .right-slider, 
     .left-slider{
         font-size: 0.5rem;
