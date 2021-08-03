@@ -99,15 +99,16 @@ window.addEventListener("scroll" ,() => {
 // 1-getting the target button
 // 2-on click adding up the value 
 // 3-then dividing the value into 5
-// 4-then we can change the class of item according to left overs
+// 4-then we can change the class of item according to remainings
 const projects = document.querySelectorAll(".project");
 const nextBtns = document.querySelectorAll(".right-one");
 const prevBtns = document.querySelectorAll(".left-one");
+const lilBtns = document.querySelectorAll(".small-slider-wrapper .slider");
 let counter = 1;
 let finalNum;
 nextBtns.forEach(btn => {
     btn.addEventListener("click" , ()=>{
-        // counter++;
+        
         projects.forEach(project => {
                 let secClass = project.classList[1];
                 finalNum = parseInt(secClass[8]) + counter;
@@ -115,7 +116,7 @@ nextBtns.forEach(btn => {
                 {
                     finalNum = finalNum % 5;
                 }
-                project.classList.replace(secClass, `project-${finalNum}`)
+                project.classList.replace(secClass, `project-${finalNum}`);
         })
     })
 })
@@ -133,14 +134,100 @@ prevBtns.forEach(btn => {
         })
     })
 })
+// while user clickes on projects 
+// if(is shown project ){do nothing}
+// if(is back project ){disable the link}
+// and bring that project forward.in order to do that :
+// need to get the class number and add it up to a certain number till the number equals to 2
+
 projects.forEach(project => {
     project.addEventListener("click" , e => {
-        const item = e.target.parentElement;
-        // console.log(item);
-        if (item.classList[1] === "project-2") {
-            
+        const item = e.target.classList[1];
+        if (item === "project-2") {
+
         }else{
-            e.preventDefault()
+            e.preventDefault();
+            let result;
+           let carousel= setInterval(() => {       
+                    if (e.target.classList.contains("project-2")) {
+                        clearInterval(carousel)
+                    } else {
+
+                        projects.forEach(p => {
+                            if(parseInt(item[8]) > 2)
+                            {
+                                result = parseInt(p.classList[1][8]) - 1;
+                            }else{
+                                result = parseInt(p.classList[1][8]) + 1;
+                            }
+                            if (result >=5 || result <= -1) {
+                                result = (result + 5) % 5;
+                            }  
+                            p.classList.replace(p.classList[1] , `project-${result}`)
+                        })
+                    }
+                }, 300); 
         }
     })
 });
+
+// little sliders under projects
+// each one of them represent a project
+// so we are going to add an onckick event to this sliders
+// while clicking on each slider the project link to it will come forward
+lilBtns.forEach(lilBtn => {
+    lilBtn.addEventListener("click" , e => { 
+        const targetSlider = e.target;
+        const targetIndex = parseInt(targetSlider.classList[1][7]);
+        const relatedSlider = document.querySelector(`.p-${targetIndex}`);
+        let diffIndex = parseInt(relatedSlider.classList[1][8]) - 2;
+        let carousel2 = setInterval(() => {
+            if (diffIndex == 0) {
+                clearInterval(carousel2)
+            }else{
+                Array.from(projects).forEach(project => {
+                    let projectIndex = project.classList[1];
+                    let nextIndex;
+                    if (diffIndex > 0) {
+                         nextIndex = parseInt(projectIndex[8]) -1 ;
+                    }else {
+                         nextIndex = parseInt(projectIndex[8]) +1 ;
+                    }
+                    if(nextIndex <=-1 || nextIndex >= 5){
+                        nextIndex = (nextIndex +5 ) %5
+                    }
+                    project.classList.replace(projectIndex , `project-${nextIndex}`)
+                })
+                if (diffIndex > 0) {
+                    diffIndex -= 1;
+
+                }else{
+                    diffIndex += 1;
+
+                }
+            }
+
+        }, 300);
+        targetSlider.classList.add("active");
+        
+
+        lilBtns.forEach(unclcik => {
+            if (unclcik != e.target) {
+                unclcik.classList.remove("active");
+            }
+        })
+    })
+})
+
+// automating lilslider moves
+// getting .project-2 class
+// and adding .active class to related lilslider
+projects[0].addEventListener("transitionend" , () => {
+    const mainProject = document.querySelector(".projects .project-2");
+    const SliderIndex = parseInt(mainProject.classList[2][2]);
+    lilBtns.forEach(lilBtn => {
+        lilBtn.classList.remove("active");
+
+    })
+    lilBtns[SliderIndex].classList.add("active");
+})

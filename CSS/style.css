@@ -591,19 +591,23 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    overflow-x: s;
 }
 .projects a {
     color: inherit;
     text-decoration: none;
     width: 100%;
-    height: 100%;
-    display: flex;
+    height: 80%;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    display: none;
     
     
+}
+.project-2 a {
+    display: flex;
 }
 .projects .project{
     display: none;
@@ -614,13 +618,14 @@ body{
     backdrop-filter: blur(50px);
     border: 1px solid #5f98fb2c;
     cursor: pointer;
-    transition:all 0.4s ease-in;
+    -webkit-transition: all 0.4s linear;
+    transition:all 0.4s ease , z-index 0.2s;
 
 
 }
 .projects .project-0{
     height: 70%;
-    left: 10%;
+    right: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -628,7 +633,7 @@ body{
 }
 .projects .project-1{
     height: 75%;
-    left: 17.5%;
+    right: 32.5%;
     flex-direction: column;
     align-items: center;
     z-index: 2;
@@ -639,7 +644,7 @@ body{
 .projects .project-2{
     display: flex;
     flex-direction: column;
-    left: 25%;
+    right: 25%;
     align-items: center;
     z-index: 5;
 }
@@ -650,7 +655,6 @@ body{
     right: 17.5%;
     align-items: center;
     z-index: 2;
-    transition: right 0.4s ;
 }
 .projects .project-4{
     height: 70%;
@@ -658,8 +662,6 @@ body{
     flex-direction: column;
     right: 10%;
     align-items: center;
-    transition: all 0.4s !important;
-
 }
 .project .project-name {
     padding: 15px 0;
@@ -674,33 +676,10 @@ body{
     height: 140px;
     margin-bottom: 20px;
 }
-.project-0 .project-img{
-    /* background: url(../Image/heads&tails.png) ; */
+.project .project-img{
     background-size: contain;
     
 }
-.project-1 .project-img{
-    /* background: url(../Image/coming-soon.png) ; */
-    background-size: contain;
-   
-    
-}
-.project-2 .project-img{
-    /* background: url(../Image/starbucks.png) ; */
-    background-size: contain;
-
-}
-.project-3 .project-img{
-    /* background: url(../Image/login-form.png) ; */
-    background-size: contain;
-
-}
-.project-4 .project-img{
-    /* background: url(../Image/ehsan-gallery.png) ; */
-    background-size: contain;
-
-}
-
 .project .project-info{
     display: block;
     text-align: justify;
@@ -729,6 +708,13 @@ body{
     background-color: #5f98fb71;
     margin: 0 5px;
     cursor: pointer;
+    transition: color 0.3s linear;
+}
+.small-slider-wrapper .slider:hover{
+    background: #5F98FB;
+}
+.small-slider-wrapper .slider.active{
+    background: #5F98FB;
 }
 .right-slider{
     position: absolute;
@@ -792,9 +778,7 @@ body{
     /* color: #E2E2E2; */
 
 }
-.small-slider-wrapper .slider:hover{
-    background: #5F98FB;
-}
+
 @media only screen and (max-width:870px) {
     .project .project-info{
         width: 95%;
@@ -822,9 +806,9 @@ body{
     .projects .project{
         width: 70%;
     }
-    .projects .project-0{left: 5%;}
-    .projects .project-1{left: 10%;}
-    .projects .project-2{left: 15%;}
+    .projects .project-0{right: 25%;}
+    .projects .project-1{right: 20%;}
+    .projects .project-2{right: 15%;}
     .projects .project-3{right: 10%;}
     .projects .project-4{right: 5%;}
     .right-slider, 
@@ -972,7 +956,7 @@ padding-left: 20px;
 }
 .other-social .fa-instagram {
     background: -webkit-linear-gradient(45deg , #f58529 , #feda77 , #dd2a7b , #8134af , #515bd4);
-    -webkit-background-clip: text;
+    -webkit-background-clip : text;
     -webkit-text-fill-color: transparent;
 }
 .other-social .fa-telegram{
