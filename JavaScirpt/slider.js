@@ -143,8 +143,9 @@ prevBtns.forEach(btn => {
 projects.forEach(project => {
     project.addEventListener("click" , e => {
         const item = e.target.classList[1];
+        console.log(e.target.parentElement)
         if (item === "project-2") {
-
+            // console.log(e.target.parentElement);
         }else{
             e.preventDefault();
             let result;
@@ -222,7 +223,7 @@ lilBtns.forEach(lilBtn => {
 // automating lilslider moves
 // getting .project-2 class
 // and adding .active class to related lilslider
-projects[0].addEventListener("transitionend" , () => {
+projects[0].addEventListener("transitionstart" , () => {
     const mainProject = document.querySelector(".projects .project-2");
     const SliderIndex = parseInt(mainProject.classList[2][2]);
     lilBtns.forEach(lilBtn => {
@@ -230,4 +231,37 @@ projects[0].addEventListener("transitionend" , () => {
 
     })
     lilBtns[SliderIndex].classList.add("active");
+    // removing elements insde projects but project-2
+projects.forEach(project => {
+    if(project.classList[1] == "project-2")
+    {
+        Array.from(project.children).forEach(item => {
+            item.style.display = "initial"
+        })
+    }else{
+        Array.from(project.children).forEach(item => {
+            item.style.display = "none"
+        })
+    }
+})
+})
+// settings of contact me form
+const form = document.querySelector("form.contact-me");
+form.addEventListener("submit" , e => {
+    // disabling contact me 
+    e.preventDefault()
+})
+
+// adding direction to projects on click
+const opener = document.querySelector(".projects .h-project.hidden");
+opener.addEventListener("click" , e => {
+    projects.forEach(project => {
+        // getting the link of project
+        if (project.classList[1] == "project-2") {
+            let link = Array.from(project.children)[0];
+            link = link.href;
+            // opening the window of project
+            window.open(link)
+        }
+    })
 })

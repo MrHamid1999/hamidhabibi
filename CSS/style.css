@@ -591,24 +591,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-x: s;
 }
-.projects a {
-    color: inherit;
-    text-decoration: none;
-    width: 100%;
-    height: 80%;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    display: none;
-    
-    
-}
-.project-2 a {
-    display: flex;
-}
+
+
 .projects .project{
     display: none;
     position: absolute;
@@ -622,6 +607,29 @@ body{
     transition:all 0.4s ease , z-index 0.2s;
 
 
+}
+.projects .h-project{
+    display: none;
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    background-color: #6d97e656;
+    backdrop-filter: blur(50px);
+    border: 1px solid #5f98fb2c;
+    cursor: pointer;
+    -webkit-transition: all 0.4s linear;
+    transition:all 0.4s ease , z-index 0.2s;
+
+
+}
+.projects .hidden{
+    background: none;
+    backdrop-filter: none;
+    display: flex;
+    flex-direction: column;
+    right: 25%;
+    align-items: center;
+    z-index: 10;
 }
 .projects .project-0{
     height: 70%;
@@ -648,6 +656,7 @@ body{
     align-items: center;
     z-index: 5;
 }
+
 .projects .project-3{
     height: 75%;
     display: flex;
@@ -669,9 +678,7 @@ body{
     font-family: "zen tokyo zoo";
 }
 
-.project .project-img {
-
-    
+.project .project-img {   
     width: 300px;
     height: 140px;
     margin-bottom: 20px;
@@ -687,8 +694,8 @@ body{
     position: relative;
     top: 10%;
     color: #000000bf;
-    font-family: cursive;
-    font-size: 0.9rem;
+    font-family:  monospace;
+    font-size: 1rem;
 }
 .project-0 .project-info{
     font-size: 0.7rem;
@@ -778,7 +785,24 @@ body{
     /* color: #E2E2E2; */
 
 }
-
+.more-projects{
+width: 100%;
+height: 50px;
+margin-top: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+color: rgb(241, 241, 241);
+font-size: 1.3rem;
+font-weight: 500;
+background: #5F98FB;
+}
+.more-projects:hover{
+    background: #5f98fb62;
+    border:2px solid  #5F98FB;
+    color: #5F98FB;
+}
 @media only screen and (max-width:870px) {
     .project .project-info{
         width: 95%;
@@ -806,6 +830,7 @@ body{
     .projects .project{
         width: 70%;
     }
+    .projects .hidden{right: 15%;}
     .projects .project-0{right: 25%;}
     .projects .project-1{right: 20%;}
     .projects .project-2{right: 15%;}
