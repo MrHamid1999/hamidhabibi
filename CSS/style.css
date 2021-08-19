@@ -682,11 +682,9 @@ body{
     width: 300px;
     height: 140px;
     margin-bottom: 20px;
-}
-.project .project-img{
     background-size: contain;
-    
 }
+
 .project .project-info{
     display: block;
     text-align: justify;
@@ -694,12 +692,10 @@ body{
     position: relative;
     top: 10%;
     color: #000000bf;
-    font-family:  monospace;
+    /* font-family:  monospace; */
     font-size: 1rem;
 }
-.project-0 .project-info{
-    font-size: 0.7rem;
-}
+
 .small-slider-wrapper{
     grid-area: slider;
     width: 100%;
