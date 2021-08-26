@@ -26,3 +26,90 @@ window.addEventListener("load" , () => {
     })
 })
 
+
+// animation for all of elements;
+
+// animating the about section
+const aboutChange =() => {
+    // getting elements
+    const picture = document.querySelector('.img-wrapper img');
+    const topMenu = document.querySelector(".top-menu-wrapper nav");
+    const infoWrapper =document.querySelector(".info-wrapper")
+    topMenu.classList.add("fade-in")
+
+    setTimeout(() => {picture.classList.add("move")} , 500)
+    setTimeout(() => {infoWrapper.classList.add("turn-true")} , 800)
+    
+    }
+
+
+
+const techChange = () => {
+    const items = document.querySelectorAll('.percent-container');
+    Array.from(items).forEach(item => {
+
+        item.classList.add("full")
+    })
+}
+const liAdder = (item1 , item2 ) => {
+    let counter =0;
+
+    let adderInterval =  setInterval(()=>{
+       if(item2[counter] ==undefined) {clearInterval(adderInterval)}
+            
+        item1[counter].classList.add("visiable");
+        item2[counter].classList.add("visiable");
+        counter++ ;
+        
+    } , 800)
+
+
+}
+
+
+
+const dispalyRepeat = ()=> {
+
+    let devTools = document.querySelectorAll('.developer-tools ul li');
+    let designTools = document.querySelectorAll('.design-tools ul li');
+    devTools = Array.from(devTools);
+    designTools = Array.from(designTools);
+   
+
+    liAdder(devTools , designTools);
+}
+
+
+
+// getting the amount of scroll
+// getting inner height of elements
+let getEinHeight= window.addEventListener('scroll', () => {
+   const windowHeight =  window.scrollY;
+     const intro = document.querySelector(".home-wrapper").clientHeight - 50;
+     const aboutHeight = document.querySelector('.about-wrapper').clientHeight+intro -200;
+     const techHeight = document.querySelector(".statistics").clientHeight + aboutHeight
+
+
+    switch (true) {
+        case ( windowHeight >= intro && windowHeight <= intro+250 ):
+            aboutChange()
+            break;
+        case ( windowHeight >= aboutHeight && windowHeight <= aboutHeight +100)  :
+           setTimeout( techChange , 200)
+            break;
+        case (windowHeight >= techHeight+100 && windowHeight <= techHeight +300) :
+            dispalyRepeat()
+            break;    
+       
+    }
+    
+})
+
+const scrollEfects = (windowHeight) => {
+}
+
+
+
+
+
+

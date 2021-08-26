@@ -58,6 +58,7 @@ body{
    top:22%;
    font-family: "Great vibes";
    font-size: 5rem;
+   letter-spacing: 1.2;
    color: #070707;
    z-index: 1000;
    opacity: 0;
@@ -259,7 +260,11 @@ body{
 .top-menu-wrapper nav {
     width: 70%;
     margin: auto;
-
+    opacity: 0;
+    transition: opacity 2s ;
+}
+.top-menu-wrapper nav.fade-in{
+    opacity: 1;
 }
 .top-menu-wrapper nav ul {
     width: 100%;
@@ -336,22 +341,31 @@ body{
 }
 .about-wrapper .img-wrapper img{
     position: relative;
-    left: 20px;
-    top : -280px;
+    left: 0;
+    top : -300px;
     height: 300px;
     width: auto;
     z-index: 10;
     border: 2px solid #5F98FB;
+    transition: all 0.9s ;
     
+}
+.about-wrapper .img-wrapper img.move{
+    left : 20px;
+    top: -280px;
 }
 .info-wrapper{
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-around; */
-
+    transform: rotateY(90deg);
+    transition: transform 0.9s;
 }
+.info-wrapper.turn-true{
+    transform: rotateY(0);
+}
+
 .info-wrapper h1{
     display: block;
     color: #5F98FB;
@@ -445,18 +459,25 @@ body{
     justify-content: center;
     align-items: center;
     
-}.statistics .statistic-item{
+}
+.statistics .statistic-item{
     width: 60%;
     display: grid;
     grid-template-columns: 13% auto;
     align-items: center;
-    /* justify-content: flex-start; */
     padding: 2% 0 ;
+    transition: transform 0.4s ;
+}
+.statistics .statistic-item:hover{
+    transform: scale(1.2);
+    cursor :pointer;
+    color: yellowgreen;
 }
 .statistic-item p {
     justify-self: start;
     font-weight: 600;
 }
+
 .statistic-item .percent-container {
     height: 30px;
     width: 80%;
@@ -475,20 +496,22 @@ body{
 .percent-container .percentage{
     height: 100%;
     background-color: #5F98FB;
+    width : 0;
+    transition: width 0.9s ;
     
     
 }
-.html-wrapper .percent-container .percentage ,
-.css-wrapper .percent-container .percentage{
+.html-wrapper .percent-container.full .percentage ,
+.css-wrapper .percent-container.full .percentage{
     width: 85%;
 }
-.js-wrapper .percent-container .percentage{
+.js-wrapper .percent-container.full .percentage{
     width: 80%;
 }
-.adobe-xd-wrapper .percent-container .percentage{
+.adobe-xd-wrapper .percent-container.full .percentage{
     width: 60%;
 }
-.photoshop-wrapper .percent-container .percentage{
+.photoshop-wrapper .percent-container.full .percentage{
     width: 30%;
 }
 .tools-wrapper{
@@ -513,11 +536,22 @@ body{
 }
 .tools-p2 div h2{
     margin-bottom: 50px;
+    cursor: pointer;
 }
 .tools-p2 div ul li {
     list-style: none;
     padding: 10px;
     color: #b9b8b8;
+    opacity:0;
+    transition: all 0.5s ;
+}
+.tools-p2 div ul li:hover{
+    cursor: pointer;
+    color: #5F98FB;
+    transform: scale(1.1);
+}
+.tools-p2 li.visiable{
+    opacity: 1;
 }
 @media only screen and (max-width:760px)
 {

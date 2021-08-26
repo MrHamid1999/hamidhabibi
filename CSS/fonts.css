@@ -2,3 +2,19 @@
     font-family: "zen tokyo zoo";
     src: url(../Font/Zen_Tokyo_Zoo/ZenTokyoZoo-Regular.ttf) ;
 }
+
+@font-face {
+    font-family: Dosis;
+    src : url(../Font/Dosis-VariableFont_wght.ttf)
+}
+
+@font-face{
+    font-family: "Great vibes" ;
+    src : url(../Font/GreatVibes-Regular.ttf)
+
+}
+@font-face{
+    font-family: "Great vibes" ;
+    src : url(../Font/Cooper\ Std\ Black/Cooper\ Std\ Black.ttf)
+
+}
