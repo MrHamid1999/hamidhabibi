@@ -14,7 +14,18 @@
 
 }
 @font-face{
-    font-family: "Great vibes" ;
+    font-family: "Cooper std" ;
     src : url(../Font/Cooper\ Std\ Black/Cooper\ Std\ Black.ttf)
 
 }
+@font-face{
+
+    font-family: MingLiU_HKSCS-ExtB;
+    src : url(../Font/MINGLIU.ttf)
+
+}
+@font-face{
+    font-family: "ink free";
+    src : url(../Font/MINGLIU.ttf)
+}
+
